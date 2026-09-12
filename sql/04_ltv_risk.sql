@@ -133,3 +133,26 @@ ORDER BY
         WHEN ltv_bucket = '>100%' THEN 5
         ELSE 6
     END;
+    
+    USE hmda_credit_risk;
+
+SHOW CREATE VIEW vw_ltv_risk;
+
+SELECT
+    VIEW_DEFINITION
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'hmda_credit_risk'
+  AND TABLE_NAME = 'vw_ltv_risk';
+  
+  
+SELECT
+    SUBSTRING(VIEW_DEFINITION, 1, 1000) AS part_1
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'hmda_credit_risk'
+  AND TABLE_NAME = 'vw_ltv_risk';
+  
+SELECT
+    SUBSTRING(VIEW_DEFINITION, 1001, 1000) AS part_2
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'hmda_credit_risk'
+  AND TABLE_NAME = 'vw_ltv_risk';
