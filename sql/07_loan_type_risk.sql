@@ -137,3 +137,48 @@ HAVING
 ORDER BY
     loan_purpose_label,
     decisioned_denial_rate DESC;
+    
+    
+    
+USE hmda_credit_risk;
+
+CREATE OR REPLACE VIEW vw_loan_type_risk AS
+SELECT
+    loan_type,
+
+    CASE loan_type
+        WHEN 1 THEN 'Conventional'
+        WHEN 2 THEN 'FHA'
+        WHEN 3 THEN 'VA'
+        WHEN 4 THEN 'USDA / RHS'
+    END AS loan_type_label,
+
+    COUNT(*) AS total_applications,
+
+    SUM(decisioned) AS decisioned_applications,
+
+    SUM(CASE
+        WHEN action_taken = 1 THEN 1
+        ELSE 0
+    END) AS loans_originated,
+
+    SUM(CASE
+        WHEN action_taken = 3 THEN 1
+        ELSE 0
+    END) AS applications_denied,
+
+    ROUND(
+        SUM(CASE
+            WHEN action_taken = 3 THEN 1
+            ELSE 0
+        END)
+        / NULLIF(SUM(decisioned), 0) * 100,
+        2
+    ) AS denial_rate
+
+FROM hmda_analytical_prod
+
+GROUP BY loan_type;
+
+SELECT *
+FROM vw_loan_type_risk;
