@@ -5,7 +5,7 @@
 This project looks at mortgage application outcomes from a credit-risk and underwriting perspective. The aim was to take the data through a complete analytics workflow: raw-data profiling, data-quality checks, Python processing, SQL analysis, risk segmentation and an interactive Power BI report.
 
 <p align="center">
-  <img src="docs/images/img1.png" alt="2024 HMDA Mortgage Credit Risk Overview" width="95%">
+  <img src="docs/images/pg-1.png" alt="2024 HMDA Mortgage Credit Risk Overview" width="95%">
 </p>
 
 ---
@@ -42,37 +42,37 @@ The Power BI report contains seven pages, including a loan-purpose drill-through
 
 ### 1. Executive Risk Overview
 
-<img src="docs/images/img1.png" alt="Executive Risk Overview" width="95%">
+<img src="docs/images/pg-1.png" alt="Executive Risk Overview" width="95%">
 
 Portfolio size, denial outcomes, loan-purpose risk, DTI risk, LTV risk and state-level variation.
 
 ### 2. Risk Drivers & Concentration
 
-<img src="docs/images/img2.png" alt="Risk Drivers and Concentration" width="95%">
+<img src="docs/images/pg-2.png" alt="Risk Drivers and Concentration" width="95%">
 
 Denial reasons, loan-type risk, DTI × LTV interactions and portfolio concentration.
 
 ### 3. Executive Insights & Recommendations
 
-<img src="docs/images/img3.png" alt="Executive Insights and Recommendations" width="95%">
+<img src="docs/images/pg-3.png" alt="Executive Insights and Recommendations" width="95%">
 
 A concise summary of the main findings and practical risk-management recommendations.
 
 ### 4. Demographic & Fair Lending Analysis
 
-<img src="docs/images/img4.png" alt="Demographic and Fair Lending Analysis" width="95%">
+<img src="docs/images/pg-4.png" alt="Demographic and Fair Lending Analysis" width="95%">
 
 Observed denial-rate variation across race, ethnicity, sex and age, including standardized comparisons.
 
 ### 5. Product & Pricing Risk
 
-<img src="docs/images/img5.png" alt="Product and Pricing Risk" width="95%">
+<img src="docs/images/pg-5.png" alt="Product and Pricing Risk" width="95%">
 
 Loan type, occupancy, lien structure, loan-purpose/product combinations and originated-loan pricing.
 
 ### 6. Risk Segmentation & Deep Dive
 
-<img src="docs/images/img6.png" alt="Risk Segmentation and Deep Dive" width="95%">
+<img src="docs/images/pg-6.png" alt="Risk Segmentation and Deep Dive" width="95%">
 
 Deeper segmentation across loan purpose, loan type, DTI and portfolio exposure.
 
