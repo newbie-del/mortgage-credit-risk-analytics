@@ -1,10 +1,15 @@
 # Raw / large datasets
 data/raw/
-*.csv
+data/processed/
+
 
 # Python cache
 __pycache__/
 *.py[cod]
+
+# Power BI temporary/cache files
+*.tmp
+*.pbi[0-9]*
 
 # Virtual environments
 .venv/
